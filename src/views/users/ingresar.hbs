@@ -1,0 +1,16 @@
+<div class="container">
+    <form action="/users/ingresar" method="post" class="registro" autocomplete="off">
+        <h1>Login</h1>
+        <input type="email" autofocus name="correo" placeholder="Correo">
+        <input type="password" name="password" placeholder="Clave">
+
+        <button type="submit">
+            Entrar
+        </button>
+
+        {{#if error}}
+            <br>
+            <span class="error">{{error}}</span>
+        {{/if}}
+    </form>
+</div>

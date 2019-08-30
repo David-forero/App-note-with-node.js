@@ -1,0 +1,19 @@
+<div class="container">
+    <form action="/agregar/new-notes" method="post" autocomplete="off" class="agregar-notas">
+        <br>
+        <h2>Agregar Nota</h2>
+        <br>
+        <input type="text" placeholder="Titulo" name="titulo">
+        <br><br><br>
+        <textarea rows="10" placeholder="Descripción" name="descripcion"></textarea>
+        <br><br>
+        <button type="submit">
+            Agregar
+        </button><br>
+
+        {{#each error}}
+            <br>
+            <span class="error">{{text}}</span>
+        {{/each}}
+    </form>
+</div>

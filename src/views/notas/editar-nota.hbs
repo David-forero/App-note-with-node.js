@@ -1,0 +1,20 @@
+<div class="container">
+    <form action="/notas/editar/{{editar.id}}?_method=PUT" method="post" autocomplete="off" class="agregar-notas">
+        <input type="hidden" name="_method" value="PUT"> 
+        <br>
+        <h2>Editar Nota</h2>
+        <br>
+        <input type="text" placeholder="Titulo" name="titulo" value="{{editar.titulo}}">
+        <br><br><br>
+        <textarea rows="10" placeholder="Descripción" name="descripcion">{{editar.descripcion}}</textarea>
+        <br><br>
+        <button type="submit">
+            Editar
+        </button><br>
+
+        {{#each error}}
+            <br>
+            <span class="error">{{text}}</span>
+        {{/each}}
+    </form>
+</div>

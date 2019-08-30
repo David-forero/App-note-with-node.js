@@ -1,0 +1,26 @@
+<div class="filas">
+    {{#each rows}}
+        <div class="notas">
+            <h3>{{ titulo }} <a href="/notas/editar/{{ _id }}"><i class="fa fa-edit"></i></a></h3>
+            <br>
+            <p>{{ descripcion }}</p>
+            <br>
+            <form action="/notas/borrar/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn-eliminar">
+                    Eliminar
+                </button>
+            </form>
+        </div>
+        {{else}}
+            <div class="notas">
+                <h3>Hola {{usuario.usuario}}!</h3>
+                <br>
+                <p>No tienes notas agregadas aún</p>
+                <br>
+                <a href="/agregar/new-notes" class="btn-agregar">
+                    Agregar
+                </a>
+            </div>
+    {{/each}}
+</div>

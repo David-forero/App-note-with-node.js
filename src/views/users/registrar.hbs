@@ -1,0 +1,18 @@
+<div class="container">
+    <form action="/users/registrar" method="post" class="registro" autocomplete="off">
+        <h1>Registro de cuenta</h1>
+        <input type="text" autofocus value="{{usuario}}" name="usuario" placeholder="Nombre de usuario">
+        <input type="email" value="{{correo}}" name="correo" placeholder="Correo">
+        <input type="password" value="{{clave}}" name="clave" placeholder="Clave">
+        <input type="password" value="{{clave_confirm}}" name="clave_confirm" placeholder="Confirmar clave">
+
+        <button type="submit">
+            Registrarse
+        </button>
+
+        {{#each error}}
+            <br>
+            <span class="error">{{text}}</span>
+        {{/each}}
+    </form>
+</div>
